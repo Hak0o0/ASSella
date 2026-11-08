@@ -38,7 +38,7 @@ permissions:
 
 jobs:
   build-appimage:
-    runs-on: ubuntu-22.04-arm
+    runs-on: ubuntu-24.04-arm
     outputs:
       tag: ${{ steps.meta.outputs.tag }}
       channel: ${{ steps.meta.outputs.channel }}
