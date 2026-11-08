@@ -266,7 +266,7 @@ jobs:
 
           # 10. Install application dependencies into bundled runtime
           AppDir/bin/.venv/bin/python3 -m pip install --upgrade pip setuptools wheel
-          AppDir/bin/.venv/bin/python3 -m pip install --no-deps -r requirements.txt
+          AppDir/bin/.venv/bin/python3 -m pip install --no-deps -r requirements.txt && AppDir/bin/.venv/bin/python3 -m pip install urwid
           find AppDir/bin/.venv -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
 
           # 11. Sanity check: Verify all required imports inside bundled AppDir runtime
