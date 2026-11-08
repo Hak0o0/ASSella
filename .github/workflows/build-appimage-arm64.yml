@@ -390,7 +390,7 @@ jobs:
           fi
 
           # zsync must reference the delta target by the asset name actually published.
-          if ! grep -a -qi '^Filename:[[:space:]]*ASSella\.AppImage[[:space:]]*$' ASSella-aarch64.AppImage.zsync; then
+          if ! grep -a -qi '^Filename:[[:space:]]*ASSella-aarch64.AppImage[[:space:]]*$' ASSella-aarch64.AppImage.zsync; then
             echo "::error::zsync Filename header does not match published asset name"
             fail=1
           else
